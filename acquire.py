@@ -8,7 +8,7 @@ def get_titanic_data():
     if os.path.exists(filename):
         print('this file exists, reading from csv')
         #read from csv
-        df = pd.read_csv(filename)
+        df = pd.read_csv(filename, index_col=0)
     else:
         print('this file doesnt exist, reading from sql and saving to csv')
         #read from sql
@@ -25,7 +25,7 @@ def get_iris_data():
     if os.path.exists(filename):
         print('this file exists, reading from csv')
         #read from csv
-        df = pd.read_csv(filename)
+        df = pd.read_csv(filename, index_col=0)
     else:
         print('this file doesnt exist, reading from sql and saving to csv')
         #read from sql
@@ -44,7 +44,7 @@ def get_telco_data():
     if os.path.exists(filename):
         print('this file exists, reading from csv')
         #read from csv
-        df = pd.read_csv(filename)
+        df = pd.read_csv(filename, index_col=0)
     else:
         print('this file doesnt exist, reading from sql and saving to csv')
         #read from sql
